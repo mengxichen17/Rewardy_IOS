@@ -45,7 +45,8 @@ class CustomCell: UITableViewCell {
         }
         
         self.cardButton.menu = UIMenu(title: "Card List", children: createAction())
-        
+//        self.cardButton.showsMenuAsPrimaryAction = true
+        self.cardButton.changesSelectionAsPrimaryAction = true
     }
     
 }

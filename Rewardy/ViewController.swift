@@ -20,7 +20,11 @@ class ViewController: UIViewController {
         cardTableView.dataSource = self
     }
 
-
+    @IBAction func addCardPressed(_ sender: UIBarButtonItem) {
+        row += 1
+        cardTableView.reloadData()
+    }
+    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
