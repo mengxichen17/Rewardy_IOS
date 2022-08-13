@@ -15,6 +15,7 @@
 		DA3EC41428A5B5FD008841B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3EC41228A5B5FD008841B4 /* LaunchScreen.storyboard */; };
 		DA3EC41C28A5B951008841B4 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3EC41B28A5B951008841B4 /* CustomCell.swift */; };
 		DA3EC41E28A5C155008841B4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3EC41D28A5C155008841B4 /* Constants.swift */; };
+		DA3EC42028A71715008841B4 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3EC41F28A71715008841B4 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		DA3EC41528A5B5FD008841B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA3EC41B28A5B951008841B4 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		DA3EC41D28A5C155008841B4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DA3EC41F28A71715008841B4 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				DA3EC41228A5B5FD008841B4 /* LaunchScreen.storyboard */,
 				DA3EC41528A5B5FD008841B4 /* Info.plist */,
 				DA3EC41B28A5B951008841B4 /* CustomCell.swift */,
+				DA3EC41F28A71715008841B4 /* Card.swift */,
 				DA3EC41D28A5C155008841B4 /* Constants.swift */,
 			);
 			path = Rewardy;
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA3EC41E28A5C155008841B4 /* Constants.swift in Sources */,
+				DA3EC42028A71715008841B4 /* Card.swift in Sources */,
 				DA3EC40C28A5B5FC008841B4 /* ViewController.swift in Sources */,
 				DA3EC40828A5B5FC008841B4 /* AppDelegate.swift in Sources */,
 				DA3EC41C28A5B951008841B4 /* CustomCell.swift in Sources */,

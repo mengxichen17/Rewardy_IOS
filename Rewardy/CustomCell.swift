@@ -20,6 +20,7 @@ class CustomCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         setPopupButton()
+        cardButton.setTitle("Select Card", for: .normal)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,23 +30,28 @@ class CustomCell: UITableViewCell {
     }
 
     func setPopupButton() {
+//        let optionClosure = { (action: UIAction) in
+//            if let card = self.cardButton.currentTitle {
+//                self.resultLabel.text = K.cardData.
+//            }
         let optionClosure = { (action: UIAction) in
-            if let card = self.cardButton.currentTitle {
-                self.resultLabel.text = self.cardInfo[card]
-            }
-    
+            
         }
         
         func createAction() -> [UIAction] {
             var children = [UIAction]()
-            for card in cardInfo.keys{
-                children.append(UIAction(title: card, /*image: ,*/ state: .off, handler: optionClosure))
+            for card in K.cardData {
+                children.append(UIAction(title: card.name, /*image: ,*/ state: .off, handler: {
+                    (action: UIAction) in
+                    self.resultLabel.text = card.reward
+                    self.seasonLabel.text = card.season
+                }))
             }
             return children
         }
         
         self.cardButton.menu = UIMenu(title: "Card List", children: createAction())
-//        self.cardButton.showsMenuAsPrimaryAction = true
+        self.cardButton.showsMenuAsPrimaryAction = true
         self.cardButton.changesSelectionAsPrimaryAction = true
     }
     
