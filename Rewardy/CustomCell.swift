@@ -19,8 +19,9 @@ class CustomCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        //cardButton.setTitle("Select Card", for: .normal)
         setPopupButton()
-        cardButton.setTitle("Select Card", for: .normal)
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -50,7 +51,7 @@ class CustomCell: UITableViewCell {
             return children
         }
         
-        self.cardButton.menu = UIMenu(title: "Card List", children: createAction())
+        self.cardButton.menu = UIMenu(title: "Card List", options: .displayInline,  children: createAction())
         self.cardButton.showsMenuAsPrimaryAction = true
         self.cardButton.changesSelectionAsPrimaryAction = true
     }

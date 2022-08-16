@@ -42,9 +42,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
+        if (editingStyle == .delete && indexPath.row < row) {
+//            row -= 1
+//            tableView.reloadData()
+            tableView.beginUpdates()
             row -= 1
-            tableView.reloadData()
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.endUpdates()
         }
+        
     }
 }
