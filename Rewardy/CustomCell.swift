@@ -21,7 +21,6 @@ class CustomCell: UITableViewCell {
         // Initialization code
         //cardButton.setTitle("Select Card", for: .normal)
         setPopupButton()
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

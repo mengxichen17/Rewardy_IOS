@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -49,17 +50,6 @@
                                                                 <color key="titleColor" name="BrandDarkBlue"/>
                                                             </state>
                                                         </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a card first.  " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" showsExpansionTextWhenTruncated="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WZc-Jh-xmt">
-                                                            <rect key="frame" x="5" y="52" width="394" height="102"/>
-                                                            <color key="backgroundColor" name="BrandGreen2"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="DKZ-tj-9Jl"/>
-                                                                <constraint firstAttribute="width" constant="394" id="pWY-cB-TkV"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Season" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyZ-YR-rtA">
                                                             <rect key="frame" x="257" y="5" width="142" height="42"/>
                                                             <color key="backgroundColor" name="BrandYellow"/>
@@ -71,6 +61,30 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a card first.  " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" showsExpansionTextWhenTruncated="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WZc-Jh-xmt">
+                                                            <rect key="frame" x="5" y="52" width="394" height="102"/>
+                                                            <color key="backgroundColor" name="BrandGreen2"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="DKZ-tj-9Jl"/>
+                                                                <constraint firstAttribute="width" constant="394" id="pWY-cB-TkV"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dTc-8Z-KZ2">
+                                                            <rect key="frame" x="179" y="10.5" width="36" height="30.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="36" id="xYr-Pw-agF"/>
+                                                            </constraints>
+                                                            <imageReference key="image" image="arrow.down.app" catalog="system" symbolScale="small" renderingMode="hierarchical">
+                                                                <hierarchicalColors>
+                                                                    <color name="BrandDarkBlue"/>
+                                                                    <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color systemColor="tertiaryLabelColor"/>
+                                                                </hierarchicalColors>
+                                                            </imageReference>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" name="BrandGreen3"/>
                                                     <constraints>
@@ -79,10 +93,13 @@
                                                         <constraint firstItem="WZc-Jh-xmt" firstAttribute="leading" secondItem="73k-Kk-BgR" secondAttribute="leading" constant="5" id="HSC-re-QL7"/>
                                                         <constraint firstItem="UyZ-YR-rtA" firstAttribute="top" secondItem="73k-Kk-BgR" secondAttribute="top" constant="5" id="RlU-gC-ZDE"/>
                                                         <constraint firstAttribute="bottom" secondItem="WZc-Jh-xmt" secondAttribute="bottom" constant="5" id="Vku-dX-Cmb"/>
+                                                        <constraint firstItem="WZc-Jh-xmt" firstAttribute="top" secondItem="dTc-8Z-KZ2" secondAttribute="bottom" constant="8" id="a5r-6g-N6J"/>
                                                         <constraint firstItem="3GW-xQ-cX0" firstAttribute="leading" secondItem="73k-Kk-BgR" secondAttribute="leading" constant="5" id="a85-Jv-vFy"/>
                                                         <constraint firstAttribute="trailing" secondItem="UyZ-YR-rtA" secondAttribute="trailing" constant="5" id="cy7-Fj-CnD"/>
+                                                        <constraint firstItem="UyZ-YR-rtA" firstAttribute="leading" secondItem="dTc-8Z-KZ2" secondAttribute="trailing" constant="42" id="jia-mR-c8d"/>
                                                         <constraint firstItem="UyZ-YR-rtA" firstAttribute="leading" secondItem="3GW-xQ-cX0" secondAttribute="trailing" constant="40" id="kgv-bn-sYP"/>
                                                         <constraint firstAttribute="trailing" secondItem="WZc-Jh-xmt" secondAttribute="trailing" constant="5" id="rNz-Eh-r5R"/>
+                                                        <constraint firstItem="dTc-8Z-KZ2" firstAttribute="top" secondItem="73k-Kk-BgR" secondAttribute="top" constant="8" id="yZv-Cq-PQF"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -158,6 +175,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.down.app" catalog="system" width="128" height="114"/>
         <namedColor name="BrandDarkBlue">
             <color red="0.13300000131130219" green="0.18000000715255737" blue="0.31400001049041748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -181,6 +199,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
